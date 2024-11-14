@@ -54,7 +54,7 @@ async def get_age(call):
 async def set_age(message, state):
     await state.update_data(age=message.text)
     data = await state.get_data()
-    await message.answer("Ввудите свой рост:")
+    await message.answer("Введите свой рост:")
     await UserState.growth.set()
 
 @dp.message_handler(state=UserState.growth)
